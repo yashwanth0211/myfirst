@@ -1,0 +1,276 @@
+h1 {
+  color: red;
+  text-align: center;
+  text-shadow: 4px 4px 5px rebeccapurple;
+}
+
+/* text shadow add shadow to our text */
+
+/* this is to individuall assign the h2 to center  */
+.h2center {
+  text-align: center;
+}
+/* the texx-align  for making the text to center  */
+.title {
+  color: rgb(150, 107, 27);
+}
+
+#italic {
+  color: orange;
+}
+
+/* Nav Bar */
+nav {
+  background-color: aquamarine;
+  text-align: center;
+}
+
+/* this is for removing the underline in links */
+a {
+  text-decoration-line: none;
+}
+
+/* this is for removing the dots in nav bar */
+nav ul {
+  list-style: none;
+}
+
+/* this will make the the lists in one line */
+nav li {
+  display: inline-block;
+  padding: 20px;
+}
+
+/* this is to change the color in the nav bar specifically */
+.nav-wrapper {
+  background-color: aqua;
+}
+
+.container {
+  border: 10px dashed rgb(59, 85, 19);
+  margin: 50px 5px 25px 0px;
+  padding: 30px 0px 10px 55px;
+}
+
+.box {
+  height: 200px;
+  width: 200px;
+  background: aqua;
+  margin: 10px;
+}
+
+/* Animation */
+@keyframes fadeMe {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* this will make the the box1 to fade out and fade in unlimited number of times */
+#box1 {
+  animation-name: fadeMe;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(1800deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+#box2 {
+  animation-name: rotation;
+  animation-duration: 5s;
+  animation-iteration-count: 5s;
+  animation-timing-function: ease-in-out;
+  border-radius: 10%;
+  background-image: radial-gradient(
+    circle,
+    purple,
+    orange,
+    yellow,
+    pink,
+    purple
+  );
+}
+
+@keyframes getBigger {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
+
+#box3 {
+  animation: getBigger 6s 8s infinite;
+  border-radius: 50%;
+  background: orangered;
+}
+
+@keyframes changecolor {
+  0% {
+    background-color: grey;
+  }
+  15% {
+    background-color: rgb(234, 25, 25);
+  }
+  25% {
+    background-color: rgb(54, 151, 27);
+  }
+  50% {
+    background-color: rgb(210, 173, 173);
+  }
+  75% {
+    background-color: rgb(119, 181, 232);
+  }
+  100% {
+    background-color: rgb(34, 40, 148);
+  }
+}
+
+#box4 {
+  animation: changecolor 5s 5s forwards;
+}
+
+@keyframes movebox {
+  0% {
+    left: 0px;
+    top: 0px;
+  }
+  25% {
+    left: 100px;
+    top: 0px;
+  }
+  50% {
+    left: 100px;
+    top: 200px;
+  }
+  75% {
+    left: 0px;
+    top: 200px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
+}
+
+#box5 {
+  animation: movebox 5s 3s;
+  background: red;
+  position: relative;
+}
+
+@keyframes identifier {
+}
+
+#box6 {
+  top: 10px;
+  left: 20px;
+  position: relative;
+}
+
+/* //to change the colour of the page */
+html {
+  /* background-image: radial-gradient( blue,green,purple);
+   background-repeat: no-repeat;
+   background-size: cover; */
+  background-color: aliceblue;
+}
+
+/* this is to keep the form in format otherwise it will be inline */
+form input,
+textarea,
+button {
+  display: block;
+  margin: 30px;
+}
+
+/* Materalizecss.com */
+
+.circle-Img {
+  border-radius: 50%;
+}
+/* this is for addign shadow to an image , we use inset to make shadow inside the image or anything*/
+img {
+  box-shadow: 20px 10px 10px rgba(24, 71, 164, 0.515) inset;
+}
+
+.flex {
+  margin: 30px;
+  display: flex;
+  border: 3px solid black;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* justify-content: flex-end,flex-end,space-around,space-between,space-evenly; */
+  /* padding: 100px; */
+  flex-direction: row-reverse;
+  /* flex-direction: column-reverse; */
+}
+/* flex-wrap makes the boxes flexible it adjusts with the screen size if we remove that the box size will decrease and fit according to that */
+/* the padding will reduce the size of the page and make the 3 containers fit in the page */
+/* flexbox forggy webiste will teach you more about flexbox */
+
+
+/* CSS GRID */
+.wrapper {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(5, [col] 20%);
+  grid-template-rows: repeat(3, [row] auto);
+  background-color: #fff;
+  color: #444;
+}
+
+.Box {
+  background-color: #444;
+  color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  font-size: 150%;
+  z-index: 10;
+}
+
+.a {
+  grid-column: col / span 2;
+  grid-row: row;
+}
+.b {
+  grid-column: col 4 / span 2;
+  grid-row: row;
+}
+.c {
+  grid-column: col / span 5;
+  grid-row: row 2;
+}
+.d {
+  grid-column: col 2 / span 1;
+  grid-row: row 3;
+}
+
+.e {
+  grid-column: col 4 / span 1;
+  grid-row: row 3;
+}
+
+.f {
+  grid-column: col 2 / span 3;
+  grid-row: row 2;
+  background-color: rgba(49, 121, 207, 0.5);
+  z-index: 20;
+}
